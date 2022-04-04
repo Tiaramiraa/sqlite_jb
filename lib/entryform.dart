@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'item.dart';
-
 class EntryForm extends StatefulWidget {
   final Item item;
   EntryForm(this.item);
   @override
   EntryFormState createState() => EntryFormState(this.item);
 }
-
 //class controller
 class EntryFormState extends State<EntryForm> {
   Item item;
@@ -118,4 +116,5 @@ class EntryFormState extends State<EntryForm> {
           ),
         ));
   }
+} 
 }
