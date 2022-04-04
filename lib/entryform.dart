@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Item.dart';
+import 'item.dart';
 
 class EntryForm extends StatefulWidget {
   final Item item;

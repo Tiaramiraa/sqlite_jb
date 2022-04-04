@@ -1,11 +1,8 @@
 import 'package:sqflite/sqflite.dart';
 import 'dart:async';
 import 'dart:io';
-import 'package:path_provider/path_provider.dart';
-import 'Item.dart';
 
 class DbHelper {
-  static DbHelper _dbHelper;
   static Database _database;
   DbHelper._createObject();
   Future<Database> initDb() async {
@@ -22,13 +19,7 @@ class DbHelper {
 
   //buat tabel baru dengan nama item
   void _createDb(Database db, int version) async {
-    await db.execute('''
- CREATE TABLE item (
- id INTEGER PRIMARY KEY AUTOINCREMENT,
- name TEXT,
- price INTEGER
- )
- ''');
+    await db.execute();
   }
 
 //select databases
@@ -71,10 +62,10 @@ class DbHelper {
   }
 
   factory DbHelper() {
-    if (_dbHelper == null) {
-      _dbHelper = DbHelper._createObject();
+    if (_Dbelper == null) {
+      _DbHelper = DbHelper._createObject();
     }
-    return _dbHelper;
+    return _DbHelper;
   }
   Future<Database> get database async {
     if (_database == null) {
